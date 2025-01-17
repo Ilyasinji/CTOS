@@ -1,0 +1,70 @@
+/* RTL Support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.rtl .sidebar {
+  right: 0;
+  left: auto;
+}
+
+.rtl .main-content {
+  margin-right: 16rem;
+  margin-left: 0;
+}
+
+.rtl .ml-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+.rtl .mr-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
+.rtl .text-left {
+  text-align: right !important;
+}
+
+.rtl .text-right {
+  text-align: left !important;
+}
+
+/* RTL Flexbox */
+.rtl .flex-row {
+  flex-direction: row-reverse;
+}
+
+.rtl .space-x-2 > * + * {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.rtl .space-x-3 > * + * {
+  margin-right: 0.75rem;
+  margin-left: 0;
+}
+
+.rtl .space-x-4 > * + * {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+/* RTL Icons and Buttons */
+.rtl .icon {
+  transform: scaleX(-1);
+}
+
+/* RTL Tables */
+.rtl th,
+.rtl td {
+  text-align: right;
+}
+
+/* RTL Dropdown menus */
+.rtl .dropdown-menu {
+  right: 0;
+  left: auto;
+}

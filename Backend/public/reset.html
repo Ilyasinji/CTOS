@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reset Data</title>
+</head>
+<body>
+    <h2>Reset Traffic System Data</h2>
+    
+    <form id="resetDrivers">
+        <button type="submit">Reset Drivers</button>
+    </form>
+
+    <br>
+
+    <form id="resetOffenses">
+        <button type="submit">Reset Offenses</button>
+    </form>
+
+    <script>
+        document.getElementById('resetDrivers').onsubmit = async (e) => {
+            e.preventDefault();
+            try {
+                const response = await fetch('http://localhost:5000/api/drivers/reset', {
+                    method: 'POST'
+                });
+                const data = await response.json();
+                alert(data.message);
+            } catch (err) {
+                alert('Error resetting drivers');
+            }
+        };
+
+        document.getElementById('resetOffenses').onsubmit = async (e) => {
+            e.preventDefault();
+            try {
+                const response = await fetch('http://localhost:5000/api/offenses/reset', {
+                    method: 'POST'
+                });
+                const data = await response.json();
+                alert(data.message);
+            } catch (err) {
+                alert('Error resetting offenses');
+            }
+        };
+    </script>
+</body>
+</html> 
